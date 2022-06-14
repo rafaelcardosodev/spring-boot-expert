@@ -1,5 +1,12 @@
+com\github\rafaelcardosodev\Cat.class
 com\github\rafaelcardosodev\model\Cliente.class
-com\github\rafaelcardosodev\repository\ClienteRepository.class
-com\github\rafaelcardosodev\AppConfiguration.class
+com\github\rafaelcardosodev\AnimalConfiguration.class
+com\github\rafaelcardosodev\Animal.class
+com\github\rafaelcardosodev\AnimalConfiguration$2.class
 com\github\rafaelcardosodev\service\ClienteService.class
+com\github\rafaelcardosodev\repository\ClienteRepository.class
+com\github\rafaelcardosodev\Dog.class
+com\github\rafaelcardosodev\AnimalConfiguration$1.class
+com\github\rafaelcardosodev\AppConfiguration.class
+com\github\rafaelcardosodev\Development.class
 com\github\rafaelcardosodev\VendasApplication.class
