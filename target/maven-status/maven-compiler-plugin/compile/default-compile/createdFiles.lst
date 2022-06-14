@@ -1,0 +1,5 @@
+com\github\rafaelcardosodev\model\Cliente.class
+com\github\rafaelcardosodev\repository\ClienteRepository.class
+com\github\rafaelcardosodev\AppConfiguration.class
+com\github\rafaelcardosodev\service\ClienteService.class
+com\github\rafaelcardosodev\VendasApplication.class
