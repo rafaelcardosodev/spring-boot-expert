@@ -1,31 +1,28 @@
 package com.github.rafaelcardosodev;
 
-import org.springframework.beans.factory.annotation.Value;
+import com.github.rafaelcardosodev.domain.model.Cliente;
+import com.github.rafaelcardosodev.domain.repository.ClienteRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @SpringBootApplication
-@RestController
 public class VendasApplication {
 
-    @Value("${application.name}")
-    private String applicationName;
+    @Bean
+    public CommandLineRunner init(@Autowired ClienteRepository clienteRepository) {
+        return args -> {
+            clienteRepository.save(new Cliente("Rafael"));
+            clienteRepository.save(new Cliente("Mauro"));
 
-    @Cat
-    private Animal animal;
-
-    @Bean(name = "executeAnimal")
-    public CommandLineRunner execute() {
-        return args -> this.animal.makeNoise();
-    }
-
-    @GetMapping("/hello")
-    public String helloWord() {
-        return applicationName;
+            List<Cliente> clienteList = clienteRepository.getAll();
+            clienteList.forEach(System.out::println);
+        };
     }
 
     public static void main(String[] args) {
